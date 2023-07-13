@@ -1,38 +1,21 @@
 .wpo-section-title {
 	margin-bottom: 60px;
-	
+	text-align: center;
+
 	@include media-query(767px) {
 		margin-bottom: 40px;
 	}
 
-	span{
-		text-transform: uppercase;
-		font-size: 20px;
-		color: $theme-primary-color;
-		font-family: $heading-font;
-	}
+
 
 	h2 {
-		font-size: 40px;
-		line-height: 55px;
 		margin: 0;
-		margin-top: 15px;
 		position: relative;
-		text-transform: capitalize;
 		font-family: $heading-font;
-		padding-left: 40px;
-		font-weight: 600;
-		margin-top: 0;
-
-		&:before{
-          position: absolute;
-		  left: 0;
-		  top: 0;
-		  width: 10px;
-		  height: 100%;
-		  background: $theme-primary-color;
-		  content: "";
-		}
+		font-size: 50px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $heading-color;
 
 		@include media-query(767px) {
 			font-size: 32px;
@@ -45,7 +28,68 @@
 
 	}
 
-	p{
+	p {
+		font-size: 18px;
+	}
+
+}
+
+.wpo-section-title-s2 {
+	margin-bottom: 60px;
+	text-align: center;
+
+	@include media-query(767px) {
+		margin-bottom: 40px;
+	}
+
+	span {
+		position: relative;
+		padding-left: 15px;
+		color: #AF9067;
+		font-size: 14px;
+		font-family: $base-font;
+		font-weight: 700;
+		letter-spacing: 2.8px;
+		text-transform: uppercase;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 6px;
+			height: 6px;
+			border-radius: 100px;
+			content: '';
+			background: #AF9067;
+		}
+	}
+
+	h2 {
+		margin: 0;
+		position: relative;
+		font-family: $heading-font;
+		text-transform: uppercase;
+		color: #20170C;
+		font-size: 42px;
+		font-weight: 400;
+		line-height: 53px;
+		text-transform: capitalize;
+
+
+
+		@include media-query(767px) {
+			font-size: 32px;
+			line-height: 40px;
+		}
+
+		@include media-query(330px) {
+			font-size: 30px;
+		}
+
+	}
+
+	p {
 		font-size: 18px;
 	}
 

@@ -115,10 +115,10 @@
     
     // tooltips
 
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+  
+
+
+
 
      /*------------------------------------------
         = TEAM SECTION
@@ -214,6 +214,18 @@
     });
 
 
+    if ($(".hero-slider-wrap").length) {
+        $('.hero-slider-content').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots:true,
+            fade: false,
+            
+          
+        });
+      
+    }
 
 
 
@@ -226,8 +238,6 @@
 
                 //active wow
                 wow.init();
-
-
 
             });
         }
@@ -493,28 +503,11 @@
         });
     }
 
-
-    /*------------------------------------------
-        = Testimonial SLIDER
+     /*------------------------------------------
+        = choose-slider
     -------------------------------------------*/
-    if ($(".wpo-testimonial-wrap").length) {
-        $(".wpo-testimonial-wrap").owlCarousel({
-            autoplay: false,
-            smartSpeed: 300,
-            margin: 20,
-            loop:true,
-            fade:true,
-            autoplayHoverPause:true,
-            dots: true,
-            nav: false,
-            items: 1,
-        });
-    }
-    /*------------------------------------------
-        = Testimonial SLIDER
-    -------------------------------------------*/
-    if ($(".wpo-service-slider").length) {
-        $(".wpo-service-slider").owlCarousel({
+    if ($(".choose-slider").length) {
+        $(".choose-slider").owlCarousel({
             autoplay: false,
             smartSpeed: 300,
             margin: 20,
@@ -544,12 +537,115 @@
                 },
 
                 1400 : {
-                    items: 4
+                    items: 3
                 },
 
             }
         });
     }
+
+
+
+
+    if ($(".testimonial-slider").length) {
+        $('.all-imgage').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.all-imgage',
+            focusOnSelect: true,
+            dots:true,
+            arrows:false,
+            
+
+          /*   responsive: [
+                {
+                    breakpoint: 500,
+                    settings: {
+                    slidesToShow: 3,
+                        infinite: true
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ] */
+
+        });
+    }
+
+
+
+
+    /*------------------------------------------
+        = Testimonial SLIDER
+    -------------------------------------------*/
+    if ($(".wpo-testimonial-wrap").length) {
+        $(".wpo-testimonial-wrap").owlCarousel({
+            autoplay: false,
+            smartSpeed: 300,
+            margin: 20,
+            loop:true,
+            fade:true,
+            autoplayHoverPause:true,
+            dots: true,
+            nav: false,
+            items: 1,
+        });
+    }
+
+    /*------------------------------------------
+        = testimonial-slider-s2
+    -------------------------------------------*/
+    if ($(".testimonial-slider-s2").length) {
+        $(".testimonial-slider-s2").owlCarousel({
+            autoplay: false,
+            smartSpeed: 300,
+            margin: 20,
+            loop:true,
+            autoplayHoverPause:true,
+            dots: true,
+            nav: false,
+            responsive: {
+                0 : {
+                    items: 1,
+                    dots: true,
+                    nav: false
+                },
+
+                500 : {
+                    items: 1,
+                    dots: true,
+                    nav: false
+                },
+
+                768 : {
+                    items: 2,
+                },
+
+                1200 : {
+                    items: 2
+                },
+
+                1400 : {
+                    items: 2
+                },
+
+            }
+        });
+    }
+
+
+
     /*------------------------------------------
         = Testimonial SLIDER
     -------------------------------------------*/
@@ -566,15 +662,121 @@
         });
     }
 
+        /*------------------------------------------
+        = wpo-project-single-main-img
+    -------------------------------------------*/
+    if($(".wpo-project-single-main-img".length)) {
+        $(".wpo-project-single-main-img").owlCarousel({
+            mouseDrag: false,
+            smartSpeed: 500,
+            margin: 30,
+            loop:true,
+            nav: true,
+            navText: ['<i class="fi ti-arrow-left"></i>','<i class="fi ti-arrow-right"></i>'],
+            dots: false,
+            items: 1
+        });
+    } 
 
 
+
+
+
+    /*------------------------------------------
+        = project-slider-s2
+    -------------------------------------------*/
+    if ($(".project-slider-s2").length) {
+        $(".project-slider-s2").owlCarousel({
+            autoplay: true,
+            smartSpeed: 300,
+            margin: 0,
+            loop:true,
+            center:true,
+            autoplayHoverPause:true,
+            dots: false,
+            nav: false,
+            navText: ['<i class="fi ti-arrow-left"></i>','<i class="fi ti-arrow-right"></i>'],
+            responsive: {
+                0 : {
+                    items: 1,
+                    dots: true
+
+                },
+
+                500 : {
+                    items: 1,
+                    dots: true
+
+                },
+
+                768 : {
+                    items: 2,
+                    dots: true
+                },
+
+                1200 : {
+                    items: 3
+                },
+
+                1400 : {
+                    items: 4
+                },
+
+            }
+        });
+    }
+
+   
+  
+
+
+ 
+
+    /*------------------------------------------
+        = POST SLIDER
+    -------------------------------------------*/
+    if($(".blog-slider".length)) {
+        $(".blog-slider").owlCarousel({
+            smartSpeed: 500,
+            margin: 30,
+            loop:true,
+            nav: true,
+            arrows:false,
+            dots: true,
+            responsive: {
+                0 : {
+                    items: 1,
+                    dots: true,
+                    nav: false
+                },
+
+                500 : {
+                    items: 1,
+                    dots: true,
+                    nav: false
+                },
+
+                768 : {
+                    items: 2,
+                },
+
+                1200 : {
+                    items: 3
+                },
+
+                1400 : {
+                    items: 3
+                },
+
+            }
+        });
+    }  
 
     /*------------------------------------------
         = POST SLIDER
     -------------------------------------------*/
     if($(".post-slider".length)) {
         $(".post-slider").owlCarousel({
-            mouseDrag: false,
             smartSpeed: 500,
             margin: 30,
             loop:true,
@@ -677,7 +879,7 @@
     })
 
 
-    /*------------------------------------------
+   /*------------------------------------------
         = CONTACT FORM SUBMISSION
     -------------------------------------------*/
     if ($("#contact-form-main").length) {
@@ -691,7 +893,11 @@
                 email: "required",
 
                 phone: "required",
-                
+
+                adress: "required",
+
+                service: "required", 
+
                 subject: {
                     required: true
                 }
@@ -712,18 +918,18 @@
                     url: "mail-contact.php",
                     data: $(form).serialize(),
                     success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
+                        $("#loader").hide();
+                        $("#success").slideDown("slow");
+                        setTimeout(function () {
+                            $("#success").slideUp("slow");
                         }, 3000);
                         form.reset();
                     },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
+                    error: function () {
+                        $("#loader").hide();
+                        $("#error").slideDown("slow");
+                        setTimeout(function () {
+                            $("#error").slideUp("slow");
                         }, 3000);
                     }
                 });
@@ -732,6 +938,7 @@
 
         });
     }
+
 
     /*------------------------------------------
         = CONTACT FORM SUBMISSION2
@@ -839,3 +1046,8 @@
 
 
 })(window.jQuery);
+
+
+
+
+
